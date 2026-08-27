@@ -8,7 +8,7 @@ export function criarHeroiFormatado(nome, classe, nivel) {
 
 export function calcularRecompensa(dificuldade) {
   const tabela = { facil: 50, media: 150, dificil: 400 };
-  const valor = tabela[dificuldade] ?? 0;
+  const valor = tabela[dificuldade] ?? 50;
   return formatarOuro(valor);
 }
 
@@ -17,4 +17,4 @@ console.log(`Sistema de heróis ---------`);
 const heroi = criarHeroiFormatado('Tardin',  'guerreiro', 8);
 console.log(heroi.nome,'--', heroi.descricao());
 
-console.log('Recompensa da missão:', calcularRecompensa('media'));
+console.log('Recompensa da missão:', calcularRecompensa('dificil'));
