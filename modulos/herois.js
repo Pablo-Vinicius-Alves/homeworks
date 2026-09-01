@@ -11,9 +11,14 @@ export default class Heroi {
 }
 
 export function paraMaiusculo(texto) {
+  if (typeof texto !== "string") {
+    throw new TypeError("paraMaiusculo espera uma string");
+  }
   return texto.toUpperCase();
 }
 
 export function formatarOuro(valor) {
-  return `${valor} moedas de ouro`;
+  return `${valor.toLocaleString("pt-BR")} moedas de ouro`;
 }
+
+export const TABELA_RECOMPENSAS = { facil: 50, media: 150, dificil: 400 };

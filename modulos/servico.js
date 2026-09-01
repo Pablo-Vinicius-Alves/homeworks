@@ -1,20 +1,17 @@
-import Heroi from "./herois.js"; 
-import { paraMaiusculo, formatarOuro } from "./herois.js";
+import Heroi, { paraMaiusculo, formatarOuro, TABELA_RECOMPENSAS } from "./herois.js";
 
 export function criarHeroiFormatado(nome, classe, nivel) {
-  const heroi = new Heroi(paraMaiusculo(nome), classe, nivel);
-  return heroi;
+  return new Heroi(paraMaiusculo(nome), classe, nivel);
 }
 
 export function calcularRecompensa(dificuldade) {
-  const tabela = { facil: 50, media: 150, dificil: 400 };
-  const valor = tabela[dificuldade] ?? 50;
+  const valor = TABELA_RECOMPENSAS[dificuldade] ?? TABELA_RECOMPENSAS.facil;
   return formatarOuro(valor);
 }
 
-console.log(`Sistema de heróis ---------`);
+console.log("Sistema de heróis ---------");
 
-const heroi = criarHeroiFormatado('Tardin',  'guerreiro', 8);
-console.log(heroi.nome,'--', heroi.descricao());
+const heroi = criarHeroiFormatado("Thors", "guerreiro", 15);
+console.log(heroi.nome, "-", heroi.descricao());
 
-console.log('Recompensa da missão:', calcularRecompensa('dificil'));
+console.log("Recompensa da missão:", calcularRecompensa("dificil"));
