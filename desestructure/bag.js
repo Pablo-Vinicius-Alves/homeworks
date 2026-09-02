@@ -13,8 +13,8 @@ function main() {
     }
 
     const { inventory } = player
-    const { itens } = inventory
     console.log(inventory);
+
     const { inventory: { potions } } = player
 
     const [{ type, duration }, { type: secondType, duration: secondDuration }] = potions
