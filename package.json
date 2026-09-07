@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@clack/prompts": "^1.8.0",
+    "chalk": "^6.0.0"
+  }
+}
