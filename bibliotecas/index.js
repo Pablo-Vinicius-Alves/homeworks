@@ -1,7 +1,7 @@
 import chalk from "chalk";
 import { intro, password } from "@clack/prompts";
 
-const senha = "Pamonha999";
+const senha = "Pa999";
 
 async function Login() {
     for (let i = 0; i < 3; i++) {
