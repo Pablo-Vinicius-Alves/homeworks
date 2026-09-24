@@ -5,19 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Treino Front-End</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
         <h1>Minhas Tarefas</h1>
     </header>
-<main>
-    <form id="form-tarefa">
-        <input type="text" id="input-tarefa" placeholder="Digite uma tarefa..." required>
-        <input type="number" id="input-dias" placeholder="Quanto dias pra termina-lá" required>
-    </form>
-</main>
+    <main>
+        <form id="form-tarefa">
+            <input type="text" id="input-tarefa" placeholder="Digite uma tarefa..." required>
+            <input type="number" id="input-dias" placeholder="Quanto dias pra termina-lá" min="1">
+            <button type="submit">Adicionar</button>
+        </form>
+
+        <ul id="lista-tarefas"></ul>
+    </main>
 </body>
 
 </html>
