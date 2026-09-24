@@ -13,8 +13,29 @@ form.addEventListener('submit', function(evento){
     }
 
     const novoItem = document.createElement('li');
-    novoItem.textContent = texto;
+
+    const span = document.createElement('span');
+    span.textContent = texto;
+
+    const btnExcluir = document.createElement('button');
+    btnExcluir.textContent = 'Excluir';
+    btnExcluir.classList.add('btn-excluir');
+
+    novoItem.appendChild(span);
+    novoItem.appendChild(btnExcluir);
+
     lista.appendChild(novoItem);
 
     input.value = '';
+});
+
+lista.addEventListener('click', function(evento){
+    evento.preventDefault();
+
+    const botao = evento.target.closest('.btn-excluir');
+
+    if(botao) {
+        const item = botao.closest('li');
+        item.remove();
+    };
 });
