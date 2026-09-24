@@ -1,6 +1,7 @@
 const form = document.getElementById('form-tarefa');
 const input = document.getElementById('input-tarefa');
 const inputNum = document.getElementById('input-dias');
+const lista = document.getElementById('lista-tarefas')
 
 form.addEventListener('submit', function(evento){
     evento.preventDefault();
@@ -13,7 +14,7 @@ form.addEventListener('submit', function(evento){
 
     const novoItem = document.createElement('li');
     novoItem.textContent = texto;
-    lista.appendchild(novoItem);
+    lista.appendChild(novoItem);
 
     input.value = '';
 });
