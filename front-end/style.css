@@ -57,11 +57,30 @@ main {
 #lista-tarefas li{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background: rgb(255, 255, 255);
     padding: 12px;
     margin-bottom: 8px;
     border-radius: 4px;
     box-shadow: 0 1 3px rgba(0, 0, 0, 0, 1);
+}
+
+.btn-concluido {
+    padding: 6px 8px;
+    background-color: rgb(92, 183, 7);
+    color: white;
+    border: rgb(2, 216, 49);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-concluido:hover {
+    background-color: #34ff07;
+}
+
+#lista-tarefas li.concluida span {
+    text-decoration: line-through;
+    color: #999;
 }
 
  .btn-excluir {
@@ -75,4 +94,9 @@ main {
 
 .btn-excluir:hover{
     background-color: rgb(138, 15, 15);
+}
+
+.acoes {
+    display: flex;
+    gap: 8px;
 }
